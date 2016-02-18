@@ -1,2 +1,10 @@
 node_modules
 built
+semantic
+dist/home
+dist/js
+dist/page1
+dist/semantic
+dist/vendor
+dist/app.js
+dist/main.js

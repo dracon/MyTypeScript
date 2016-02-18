@@ -6,8 +6,7 @@
   "module": "system",
   "moduleResolution": "node",
   "removeComments": true,
-  "sourceMap": true,
-  "outDir": "./built"
+  "sourceMap": true
 },
 "exclude": [
   "node_modules"

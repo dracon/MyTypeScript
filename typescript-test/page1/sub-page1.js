@@ -1,4 +1,4 @@
-System.register(['angular2/core', './sub-page1'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,33 +9,29 @@ System.register(['angular2/core', './sub-page1'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, sub_page1_1;
-    var Page1;
+    var core_1;
+    var SubPage1;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (sub_page1_1_1) {
-                sub_page1_1 = sub_page1_1_1;
             }],
         execute: function() {
-            Page1 = (function () {
-                function Page1() {
-                    this.name = "Page 1";
+            SubPage1 = (function () {
+                function SubPage1() {
+                    this.title = "SubPage1";
                 }
-                Page1 = __decorate([
+                SubPage1 = __decorate([
                     core_1.Component({
-                        selector: 'page-one',
-                        template: "\n    <h1>Hallo {{name}}</h1>\n    <sub-page1\n    ></sub-page1>\n  ",
-                        directives: [sub_page1_1.SubPage1]
+                        selector: 'sub-page1',
+                        templateUrl: "./page1/sub-page1.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], Page1);
-                return Page1;
+                ], SubPage1);
+                return SubPage1;
             }());
-            exports_1("Page1", Page1);
+            exports_1("SubPage1", SubPage1);
         }
     }
 });
-//# sourceMappingURL=page1.js.map
+//# sourceMappingURL=sub-page1.js.map

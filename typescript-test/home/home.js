@@ -1,4 +1,4 @@
-System.register(['angular2/core', './sub-page1'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,33 +9,29 @@ System.register(['angular2/core', './sub-page1'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, sub_page1_1;
-    var Page1;
+    var core_1;
+    var Home;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (sub_page1_1_1) {
-                sub_page1_1 = sub_page1_1_1;
             }],
         execute: function() {
-            Page1 = (function () {
-                function Page1() {
-                    this.name = "Page 1";
+            Home = (function () {
+                function Home() {
+                    this.title = "Home";
                 }
-                Page1 = __decorate([
+                Home = __decorate([
                     core_1.Component({
-                        selector: 'page-one',
-                        template: "\n    <h1>Hallo {{name}}</h1>\n    <sub-page1\n    ></sub-page1>\n  ",
-                        directives: [sub_page1_1.SubPage1]
+                        selector: "home",
+                        template: "\n  <h1>Welcome {{title}}</h1>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], Page1);
-                return Page1;
+                ], Home);
+                return Home;
             }());
-            exports_1("Page1", Page1);
+            exports_1("Home", Home);
         }
     }
 });
-//# sourceMappingURL=page1.js.map
+//# sourceMappingURL=home.js.map
