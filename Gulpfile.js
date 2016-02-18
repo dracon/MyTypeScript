@@ -31,7 +31,12 @@ gulp.task('html', function(){
   .pipe(gulp.dest(config.dist.dest))
 })
 
-gulp.task('semantic', function(){
-  gulp.src(['./semantic/dist/semantic.min.js','./semantic/dist/semantic.min.css'])
+gulp.task('semantic',['semanticthemes'], function(){
+  gulp.src(['./semantic/dist/semantic.min.*'])
   .pipe(gulp.dest(config.dist.destsemantic))
+})
+
+gulp.task('semanticthemes',function(){
+  gulp.src('./semantic/dist/themes/**/*')
+  .pipe(gulp.dest(config.dist.destsemantic + 'themes'))
 })
