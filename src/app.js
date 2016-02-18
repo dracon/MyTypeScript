@@ -35,7 +35,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/router'
                 TypoApp = __decorate([
                     core_1.Component({
                         selector: 'typo-app',
-                        template: "\n\n  <header>\n    <nav class=\"ui three buttons navigation\">\n      <a class=\"ui button\" [routerLink]=\"['Home']\">Home</a>\n      <a class=\"ui button\" [routerLink]=\"['Page1']\">Page 1</a>\n    </nav>\n  </header>\n  <div class=\"ui container\">\n  <router-outlet></router-outlet>\n  </div>\n  ",
+                        template: "\n  <header>\n    <nav class=\"ui three buttons navigation\">\n      <a class=\"ui button\" [routerLink]=\"['Home']\">Home</a>\n      <a class=\"ui button\" [routerLink]=\"['Page1']\">Page 1</a>\n    </nav>\n  </header>\n  <div class=\"ui container\">\n  <router-outlet></router-outlet>\n  </div>\n  ",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [router_1.ROUTER_PROVIDERS, router_1.Location]
                     }),

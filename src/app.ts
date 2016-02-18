@@ -16,7 +16,6 @@ import {Home} from './home/home';
 @Component({
   selector: 'typo-app',
   template: `
-
   <header>
     <nav class="ui three buttons navigation">
       <a class="ui button" [routerLink]="['Home']">Home</a>
