@@ -2,10 +2,10 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var config = require('./config.json');
 
-gulp.task('Default',['buildjs'], function(){
-  console.log(config.dist.dest.html);
+gulp.task('default',['buildjs'], function(){
+  console.log(config.dist.dest);
   gulp.src(config.dist.src.html)
-  .pipe(gulp.dest('./dist/'));
+  .pipe(gulp.dest(config.dist.dest));
 })
 
 gulp.task('buildjs', function(){
@@ -29,4 +29,9 @@ gulp.task('app', function(){
 gulp.task('html', function(){
   gulp.src(config.dist.src.html)
   .pipe(gulp.dest(config.dist.dest))
+})
+
+gulp.task('semantic', function(){
+  gulp.src(['./semantic/dist/semantic.min.js','./semantic/dist/semantic.min.css'])
+  .pipe(gulp.dest(config.dist.destsemantic))
 })

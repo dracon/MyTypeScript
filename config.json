@@ -1,8 +1,8 @@
 {
   "dist" : {
     "src" : {
-      "html": ["typescript-test/**/*.html"],
-      "js": ["typescript-test/**/*.js", "!typescript-test/**/*.Spec.js","!typescript-test/app.js"],
+      "html": ["src/**/*.html"],
+      "js": ["src/**/*.js", "!src/**/*.Spec.js","!src/app.js"],
       "vendor": [
         "./node_modules/angular2/bundles/angular2-polyfills.js",
         "./node_modules/es6-shim/es6-shim.min.js",
@@ -13,7 +13,8 @@
       ]
     },
     "dest" : "./dist/",
-    "destvendor" : "./dist/vendor/"
+    "destvendor" : "./dist/vendor/",
+    "destsemantic": "./dist/semantic"
 
   }
 }

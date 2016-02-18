@@ -1,0 +1,17 @@
+<form class="ui form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <div class="ui form">
+    <div class="two fields">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" name="username" value="" placeholder="Username">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" name="password" value="" placeholder="Password">
+      </div>
+    </div>
+    <div class="field">
+      <input type="button" name="submit" value="Send">
+    </div>
+  </div>
+</form>
