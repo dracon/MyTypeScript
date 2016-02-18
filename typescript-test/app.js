@@ -32,7 +32,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/router'
                 }
                 HelloApp = __decorate([
                     core_1.Component({
-                        selector: 'hello-app',
+                        selector: 'typo-app',
                         template: "\n  <header>\n    <div class=\"header\">\n        <a [routerLink]=\"['Home']\">home</a>\n        <a [routerLink]=\"['Page1']\">page 1</a>\n    </div>\n  </header>\n  <router-outlet></router-outlet>\n    <h1>Hallo {{name}}</h1>\n  ",
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }),
@@ -49,3 +49,4 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/router'
         }
     }
 });
+//# sourceMappingURL=app.js.map

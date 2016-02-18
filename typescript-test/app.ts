@@ -1,29 +1,43 @@
-import {Component} from 'angular2/core';
-import {bootstrap} from 'angular2/platform/browser';
-import {RouteConfig,ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, provide, View} from 'angular2/core';
+import {bootstrap} from 'angular2/platform/browser'
+import {
+  Route,
+  RouteConfig,
+  RouterOutlet,
+  ROUTER_PROVIDERS,
+  ROUTER_DIRECTIVES,
+  Location,
+  LocationStrategy,
+  HashLocationStrategy,
+  APP_BASE_HREF} from 'angular2/router';
 import {Page1} from './page1/page1';
+import {Home} from './home/home';
 
 @Component({
-  selector: 'hello-app',
+  selector: 'typo-app',
   template: `
+
   <header>
-    <div class="header">
-        <a [routerLink]="['Home']">home</a>
-        <a [routerLink]="['Page1']">page 1</a>
-    </div>
+    <nav class="ui three buttons navigation">
+      <a class="ui button" [routerLink]="['Home']">Home</a>
+      <a class="ui button" [routerLink]="['Page1']">Page 1</a>
+    </nav>
   </header>
+  <div class="ui container">
   <router-outlet></router-outlet>
-    <h1>Hallo {{name}}</h1>
+  </div>
   `,
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES],
+  providers: [ROUTER_PROVIDERS, Location]
 })
+
 @RouteConfig([
-  {path:'/home', name: 'Home', component: HelloApp},
-  {path:'/page1', name: 'Page1', component: Page1}
+  {path: "/",       redirectTo: ["Home"]},
+  {path: "/home",   name:"Home",    component: Home},
+  {path: "/page1",  name: "Page1",  component: Page1}
 ])
 
-export class HelloApp{
-  name: string = "Wolfgang";
+export class TypoApp{
 }
 
-bootstrap(HelloApp, [ROUTER_PROVIDERS]);
+bootstrap(TypoApp, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy}), provide(APP_BASE_HREF, {useValue: '/#b2v'})]);
