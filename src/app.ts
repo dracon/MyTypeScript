@@ -12,12 +12,13 @@ import {
   APP_BASE_HREF} from 'angular2/router';
 import {Page1} from './page1/page1';
 import {Home} from './home/home';
+import {HighLightDirective} from './directives/highlight.directive';
 
 @Component({
   selector: 'typo-app',
   template: `
   <div class="ui sixteen wide column">
-    <h1>{{sitename}}</h1>
+    <h1 [myHighLight]=color class="ui header">{{sitename}}</h1>
   </div>
   <div class="ui doubling two column row">
   <div class="sidebar eight wide tablett four wide computer column">
@@ -31,7 +32,7 @@ import {Home} from './home/home';
   </div>
   </div>
   `,
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, HighLightDirective],
   providers: [ROUTER_PROVIDERS, Location]
 })
 
@@ -43,6 +44,7 @@ import {Home} from './home/home';
 
 export class TypoApp{
   sitename = "TypeScript testapp";
+  color = "#efefef";
 }
 
 bootstrap(TypoApp, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy}), provide(APP_BASE_HREF, {useValue: '/#b2v'})]);

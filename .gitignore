@@ -8,3 +8,4 @@ dist/semantic
 dist/vendor
 dist/app.js
 dist/main.js
+dist/**/*.map
