@@ -44,7 +44,7 @@ import {HighLightDirective} from './directives/highlight.directive';
 
 export class TypoApp{
   sitename = "TypeScript testapp";
-  color = "#efefef";
+  color = "#d6de68";
 }
 
 bootstrap(TypoApp, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy}), provide(APP_BASE_HREF, {useValue: '/#b2v'})]);
