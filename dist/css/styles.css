@@ -1,0 +1,17 @@
+.container {
+  background: white;
+}
+
+.sidebar {
+  background: transparent;
+  padding: 2rem 0;
+}
+
+.article {
+  background: transparent;
+  padding: 2rem 0;
+}
+
+body {
+  background: #ededed;
+}

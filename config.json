@@ -3,6 +3,7 @@
     "src" : {
       "html": ["src/**/*.html"],
       "js": ["src/**/*.js", "!src/**/*.Spec.js","!src/app.js"],
+      "css": ["src/**/*.css"],
       "vendor": [
         "./node_modules/angular2/bundles/angular2-polyfills.js",
         "./node_modules/es6-shim/es6-shim.min.js",
@@ -14,7 +15,8 @@
     },
     "dest" : "./dist/",
     "destvendor" : "./dist/vendor/",
-    "destsemantic": "./dist/semantic"
+    "destsemantic": "./dist/semantic",
+    "destcss": "./dist/css"
 
   }
 }

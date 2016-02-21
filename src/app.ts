@@ -16,14 +16,19 @@ import {Home} from './home/home';
 @Component({
   selector: 'typo-app',
   template: `
-  <header>
-    <nav class="ui three buttons navigation">
-      <a class="ui button" [routerLink]="['Home']">Home</a>
-      <a class="ui button" [routerLink]="['Page1']">Page 1</a>
-    </nav>
-  </header>
-  <div class="ui container">
-  <router-outlet></router-outlet>
+  <div class="ui sixteen wide column">
+    <h1>{{sitename}}</h1>
+  </div>
+  <div class="ui doubling two column row">
+  <div class="sidebar eight wide tablett four wide computer column">
+    <div class="ui vertical menu sixteen wide column">
+      <a class="item" [routerLink]="['Home']">Home</a>
+      <a class="item" [routerLink]="['Page1']">Login</a>
+    </div>
+  </div>
+  <div class="article eight wide tablett twelve wide computer column">
+    <router-outlet></router-outlet>
+  </div>
   </div>
   `,
   directives: [ROUTER_DIRECTIVES],
@@ -37,6 +42,7 @@ import {Home} from './home/home';
 ])
 
 export class TypoApp{
+  sitename = "TypeScript testapp";
 }
 
 bootstrap(TypoApp, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy}), provide(APP_BASE_HREF, {useValue: '/#b2v'})]);
