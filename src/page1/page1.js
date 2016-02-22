@@ -1,5 +1,4 @@
 System.register(['angular2/core', './sub-page1'], function(exports_1) {
-    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,18 +21,18 @@ System.register(['angular2/core', './sub-page1'], function(exports_1) {
         execute: function() {
             Page1 = (function () {
                 function Page1() {
-                    this.name = "Page 1";
+                    this.name = "Login if you like! YES!";
                 }
                 Page1 = __decorate([
                     core_1.Component({
                         selector: 'page-one',
-                        template: "\n    <h1>Hallo {{name}}</h1>\n    <sub-page1\n    ></sub-page1>\n  ",
+                        template: "\n    <h1>{{name}}</h1>\n    <sub-page1>Load subpage...</sub-page1>\n  ",
                         directives: [sub_page1_1.SubPage1]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], Page1);
                 return Page1;
-            }());
+            })();
             exports_1("Page1", Page1);
         }
     }

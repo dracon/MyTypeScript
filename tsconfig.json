@@ -7,9 +7,16 @@
   "moduleResolution": "node",
   "removeComments": true,
   "sourceMap": true,
-  "outDir": "./dist"
+  "rootDir": "src",
+  "outDir": "./dist/"
 },
 "exclude": [
-  "node_modules"
-]
+  "node_modules",
+    "typings/main",
+    "typings/main.d.ts",
+    "test"
+],
+"scripts": {
+    "postinstall": "npm run typings install"
+  }
 }

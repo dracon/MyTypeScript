@@ -9,3 +9,5 @@ dist/vendor
 dist/app.js
 dist/main.js
 dist/**/*.map
+test
+typings

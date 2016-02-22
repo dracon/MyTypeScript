@@ -14,7 +14,7 @@ export class HighLightDirective {
 
   constructor(private el: ElementRef) {
     //el.nativeElement.style.backgroundColor = 'yellow';
-  }
+   }
 
   onMouseEnter() {this._highlight(this.highlightColor || this._deafultColor)}
   onMouseLeave() {this._highlight(null)}
